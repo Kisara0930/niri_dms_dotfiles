@@ -1,0 +1,6 @@
+[config]
+# User matugen templates merged by DMS when runUserMatugenTemplates is true
+
+[templates.cava]
+input_path = "~/.config/matugen/templates/cava-colors.conf"
+output_path = "~/.config/cava/themes/matugen"

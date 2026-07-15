@@ -1,0 +1,8 @@
+// 显示器布局请按自己的机器改
+// 用 `niri msg outputs` 查看输出名
+
+// output "eDP-1" {
+//     mode "1920x1080@60"
+//     scale 1
+//     position x=0 y=0
+// }

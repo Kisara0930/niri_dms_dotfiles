@@ -1,0 +1,34 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1783667676281555308 @name=microsoft-edge
+window-rule {
+    match app-id="^microsoft-edge$"
+    open-maximized true
+}
+
+// @id=wr_1783667746144797019 @name=com.follow.clash
+window-rule {
+    match app-id="^com.follow.clash$"
+    opacity 0.80
+    background-effect {
+        blur true
+    }
+}
+
+// @id=wr_1783667955453554962 @name=com.danklinux.dms
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    opacity 0.80
+    background-effect {
+        blur true
+    }
+}
+
+// @id=wr_1783667997496418435 @name=com.danklinux.dms
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    background-effect {
+        xray false
+    }
+}

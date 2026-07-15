@@ -1,0 +1,94 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/avatar.png",
+        "type": "auto",
+	"width":25,
+	"height":12,
+        "padding": {
+            "top": 1,
+            "left": 2,
+            "right": 2
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        // --- 1. 系统与基本标识 ---
+        {
+            "key": "│ 󰇅 hname   │",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+            "key": "│ 󰅐 uptime  │",
+            "type": "uptime"
+        },
+        {
+            "key": "│  kernel  │",
+            "type": "kernel"
+        },
+        {
+            "key": "│ 󰏖 pkgs    │",
+            "type": "packages"
+        },
+        // --- 2. 环境、网络与生活 ---
+        {
+            "key": "│ 󰇄 desktop │",
+            "type": "de"
+        },
+        {
+            "key": "│ 󰩟 network │",
+            "type": "localip",
+            "format": "{ipv4} ({ifname})"
+        },
+        // --- 3. 核心硬件与显示 ---
+        {
+            "key": "│ 󰍹 display │",
+            "type": "display",
+            "format": "{width}x{height} @ {scale-factor}x in {inch}\", {refresh-rate} Hz"
+        },
+        {
+            "key": "│ 󰍛 cpu     │",
+            "type": "command",
+            "text": "n=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2- | sed 's/(R)//g;s/(TM)//g;s/^ *//;s/  */ /g'); f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq 2>/dev/null); if [ -n \"$f\" ]; then awk -v n=\"$n\" -v f=\"$f\" 'BEGIN{printf \"%s @ %.2f GHz\", n, f/1e6}'; else printf '%s' \"$n\"; fi"
+        },
+        {
+            "key": "│ 󰢮 gpu     │",
+            "type": "gpu",
+            "format": "{name} @ {frequency}"
+        },
+        {
+            "key": "│  memory  │",
+            "type": "memory"
+        },
+        {
+            "key": "│ 󰉉 disk    │",
+            "type": "disk",
+            "folders": "/"
+        },
+	{
+            "key": "│ {icon} battery │",
+            "type": "battery"
+        },
+        // --- 4. 结尾装饰 ---
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│  colors  │",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
+        }
+    ]
+}

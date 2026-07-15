@@ -1,0 +1,10 @@
+{
+  "wallpaperCarousel": {
+    "enabled": true,
+    "overlayOpacity": 80,
+    "wallpaperDirectory": "~/Pictures/Wallpapers"
+  },
+  "fullscreenPowerMenu": {
+    "enabled": false
+  }
+}
